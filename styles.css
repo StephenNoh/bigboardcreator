@@ -42,9 +42,9 @@ html {
   }
   .option {
     padding: 1rem;
-    color: #00000095;
+    color: black;
     background: rgba(255, 255, 255, 0.1);
-    width: 90%;
+    width: 70%;
     border-radius: 5px;
     transition: all 0.3s;
   }
@@ -70,10 +70,10 @@ html {
     transition: all 0.2s;
   }
   button.previous {
-    background: #c84630;
+    background: #186ec4;
   }
   button.next {
-    background: #3c91e6;
+    background: #186ec4;
   }
   button.restart {
     background: #0cf574;
