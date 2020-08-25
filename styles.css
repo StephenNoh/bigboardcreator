@@ -124,3 +124,17 @@ html {
     text-align: center;
     font-size: 12px;
   }
+
+  #footer a {
+    background-color: blue;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 25px;
+    }
+    
+  #footer a:hover, a:active {
+    background-color: darkblue;
+    color: white;
+  }
