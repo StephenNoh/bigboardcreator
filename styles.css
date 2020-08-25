@@ -77,13 +77,13 @@ html {
   }
   button.restart {
     background: #0cf574;
-    color: #00000050;
+    color: black;
     font-size: 2rem;
     margin: 1rem;
     transition: all 0.4s;
   }
   button.restart:hover {
-    color: #00000098;
+    font-weight: bold;
   }
   button:hover,
   button:focus {

@@ -193,7 +193,7 @@ const questions = [
         0.1*score[0] + 0.1*score[1] + 0.8*score[2] + 0.5*score[3] + 0.7*score[4] + 0.7*score[5] + 1.0*score[6] + 1*score[7] + .2*score[8] + 1.2*score[9];
         players[3].rank = 0.5 +
         0.8*score[0] + 0.8*score[1] + 1.0*score[2] + 0.8*score[3] + 0.5*score[4] + 0.5*score[5] + 0.5*score[6] + 0*score[7] + .8*score[8] + .5*score[9];
-        players[4].rank = 0.5 +
+        players[4].rank = 1.0 +
         0.6*score[0] + 0.9*score[1] + 0.4*score[2] + 0.9*score[3] + 0.3*score[4] + 0.9*score[5] + 0.3*score[6] + 0*score[7] + .3*score[8] + .5*score[9];
         players[5].rank = 1.0 +
         0.3*score[0] + 1.0*score[1] + 1.5*score[2] + 0.2*score[3] + 0.2*score[4] + 0.3*score[5] + 1.5*score[6] + 0*score[7] + .4*score[8] + 1.3*score[9];
