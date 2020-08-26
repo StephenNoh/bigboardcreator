@@ -102,7 +102,8 @@ const questions = [
     {name: "Tyrese Haliburton", rank: -1.0, video: "https://www.youtube.com/watch?v=U3qOd8PQvxQ"},
     {name: "Isaac Okoro", rank: -1.0, video: "https://www.youtube.com/watch?v=iATlCqxmRi0"},
     {name: "Devin Vassell", rank: -0.5, video: "https://www.youtube.com/watch?v=O6ZtJw1k3bk"},
-    {name: "Onyeka Okongwu", rank: -1.0, video: "https://www.youtube.com/watch?v=nulhicMWpvo"}
+    {name: "Onyeka Okongwu", rank: -10, video: "https://www.youtube.com/watch?v=nulhicMWpvo"},
+    {name: "Aleksej Pokusevski", rank: -11, video: "https://www.youtube.com/watch?v=kXFjuG5BJvA"}
   ]
 
   
@@ -191,7 +192,9 @@ const questions = [
       players[8].rank = -0.5 +
       1.2*score[0] + 0.8*score[1] + 0.8*score[2] + 0.9*score[3] + 0.8*score[4] + 0.8*score[5] + 0.1*score[6] + 0*score[7] + .8*score[8] + .1*score[9];    
       players[9].rank = 0.25 +
-      0.7*score[0] + 0.7*score[1] + 0.9*score[2] + 0.7*score[3] + 0.2*score[4] + 0.9*score[5] + 0.5*score[6] + 0.5*score[7] + 1.0*score[8] + .2*score[9];    
+      0.7*score[0] + 0.7*score[1] + 0.9*score[2] + 0.7*score[3] + 0.2*score[4] + 0.9*score[5] + 0.5*score[6] + 0.5*score[7] + 1.0*score[8] + .2*score[9];   
+      players[10].rank = -2.0 +
+      0.4*score[0] + 1.0*score[1] + 0.5*score[2] + 1.0*score[3] + 0.3*score[4] + 0.5*score[5] + 1.5*score[6] + 0.5*score[7] + 0.6*score[8] + .3*score[9]; 
       
       //sort array of players by rank, spit out the ordered names in an array
       players.sort(compare);
@@ -204,18 +207,19 @@ const questions = [
           result.innerHTML =
 
            `<h1 class="final-score">Your big board:</h1> 
-           <div>1: <a href="${players[9].video}" target="_blank">${players[9].name}</a></div>
-           <div>2: <a href="${players[8].video}" target="_blank">${players[8].name}</a></div>
-           <div>3: <a href="${players[7].video}" target="_blank">${players[7].name}</a></div>
-           <div>4: <a href="${players[6].video}" target="_blank">${players[6].name}</a></div>
-           <div>5: <a href="${players[5].video}" target="_blank">${players[5].name}</a></div>
-           <div>6: <a href="${players[4].video}" target="_blank">${players[4].name}</a></div>
-           <div>7: <a href="${players[3].video}" target="_blank">${players[3].name}</a></div>
-           <div>8: <a href="${players[2].video}" target="_blank">${players[2].name}</a></div>
-           <div>9: <a href="${players[1].video}" target="_blank">${players[1].name}</a></div>
-           <div>10: <a href="${players[0].video}" target="_blank">${players[0].name}</a></div>
+           <div>1: <a href="${players[10].video}" target="_blank">${players[10].name}</a></div>
+           <div>2: <a href="${players[9].video}" target="_blank">${players[9].name}</a></div>
+           <div>3: <a href="${players[8].video}" target="_blank">${players[8].name}</a></div>
+           <div>4: <a href="${players[7].video}" target="_blank">${players[7].name}</a></div>
+           <div>5: <a href="${players[6].video}" target="_blank">${players[6].name}</a></div>
+           <div>6: <a href="${players[5].video}" target="_blank">${players[5].name}</a></div>
+           <div>7: <a href="${players[4].video}" target="_blank">${players[4].name}</a></div>
+           <div>8: <a href="${players[3].video}" target="_blank">${players[3].name}</a></div>
+           <div>9: <a href="${players[2].video}" target="_blank">${players[2].name}</a></div>
+           <div>10: <a href="${players[1].video}" target="_blank">${players[1].name}</a></div>
+           <div>11: <a href="${players[0].video}" target="_blank">${players[0].name}</a></div>
            <div class="results-footer">Click on a player's name to redirect to a youtube scouting video</div>
-           <div class="results-footer"><a href="https://www.sbnation.com/nba/2020/8/20/21374098/nba-mock-draft-2020-lottery-order-timberwolves-warriors-bulls" target="blank">Click here for Ricky O'Donnell's latest mock draft, with descriptions for all 10 players</a></div>
+           <div class="results-footer"><a href="https://www.sbnation.com/nba/2020/8/20/21374098/nba-mock-draft-2020-lottery-order-timberwolves-warriors-bulls" target="blank">Click here for Ricky O'Donnell's latest mock draft, with descriptions for all 11 players</a></div>
            
            
           <button class="restart">Restart Quiz</button>
