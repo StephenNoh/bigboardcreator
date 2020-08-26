@@ -99,7 +99,7 @@ html {
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.5rem;
     line-height: 3rem;
     background-color: #969ce8;
     
@@ -137,4 +137,10 @@ html {
   #footer a:hover, a:active {
     background-color: darkblue;
     color: white;
+  }
+
+  .results-footer {
+    font-size: 11px;
+    line-height: 1em;
+    padding: 10px;
   }
