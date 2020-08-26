@@ -1,5 +1,3 @@
-// QUESTIONS
-
 const questions = [
     {
       "question": "I'm not worried if a prospect is a poor defender right now. They can learn to be good once they get to the NBA.",
@@ -83,7 +81,7 @@ const questions = [
       "answer3Total": 2
     },
     {
-      "question": "I'd rather have a guy with significant holes in his game who can drop 25 points than a jack of all trades, master of none",
+      "question": "I'd rather have a guy with significant holes in his game who can drop 23 points than a jack of all trades, master of none",
       "answer1": "Agree",
       "answer1Total": 2,
       "answer2": "Neutral",
@@ -105,8 +103,6 @@ const questions = [
     {name: "Isaac Okoro", rank: -1.0, video: "https://www.youtube.com/watch?v=iATlCqxmRi0"},
     {name: "Devin Vassell", rank: -0.5, video: "https://www.youtube.com/watch?v=O6ZtJw1k3bk"},
     {name: "Onyeka Okongwu", rank: -1.0, video: "https://www.youtube.com/watch?v=nulhicMWpvo"}
- 
-    // 
   ]
 
   
@@ -127,12 +123,10 @@ const questions = [
   
   //Function to generate question 
   function generateQuestions (index) {
-      //Select each question by passing it a particular index
       const question = questions[index];
       const option1Total = questions[index].answer1Total;
       const option2Total = questions[index].answer2Total;
       const option3Total = questions[index].answer3Total;
-      //Populate html elements 
       questionEl.innerHTML = `${index + 1}. ${question.question}`
       option1.setAttribute('data-total', `${option1Total}`);
       option2.setAttribute('data-total', `${option2Total}`);
@@ -158,7 +152,7 @@ const questions = [
   
   function loadNextQuestion () {
       const selectedOption = document.querySelector('input[type="radio"]:checked');
-      //Check if there is a radio input checked
+      //Check if input selected
       if(!selectedOption) {
           alert('Please select your answer!');
           return;
@@ -168,48 +162,42 @@ const questions = [
   
       ////Add the answer score to the score array
       score.push(answerScore);
-  
       selectedAnswersData.push()
-      
-  
-      // const totalScore = score.reduce((total, currentNum) => total + currentNum);
-  
-      //Finally we incement the current question number ( to be used as the index for each array)
       currentQuestion++;
   
-          //once finished clear checked
-          selectedOption.checked = false;
+      //once finished clear checked
+      selectedOption.checked = false;
       //If quiz is on the final question
       if(currentQuestion == totalQuestions - 1) {
           nextButton.textContent = 'Finish';
       }
-      //If the quiz is finished then we hide the questions container and show the results 
-      // function getOutputs() {
-        players[0].rank = 1.0 +
-        0.3*score[0] + 1.0*score[1] + 0.6*score[2] + 1.2*score[3] + 0.5*score[4] + 0.6*score[5] + 1.5*score[6] + 0*score[7] + .6*score[8] + .6*score[9];
-        players[1].rank = 1.5 +
-        0.2*score[0] + 0.8*score[1] + 0.8*score[2] + 0.4*score[3] + 0.4*score[4] + 0.5*score[5] + 1.2*score[6] + 1*score[7] + .2*score[8] + .8*score[9];
-        players[2].rank = 1.0 +
-        0.1*score[0] + 0.1*score[1] + 0.8*score[2] + 0.5*score[3] + 0.7*score[4] + 0.7*score[5] + 1.0*score[6] + 1*score[7] + .2*score[8] + 1.2*score[9];
-        players[3].rank = 0.5 +
-        0.8*score[0] + 0.8*score[1] + 1.0*score[2] + 0.8*score[3] + 0.5*score[4] + 0.5*score[5] + 0.5*score[6] + 0*score[7] + .8*score[8] + .5*score[9];
-        players[4].rank = 1.0 +
-        0.6*score[0] + 0.9*score[1] + 0.4*score[2] + 0.9*score[3] + 0.3*score[4] + 0.9*score[5] + 0.3*score[6] + 0*score[7] + .3*score[8] + .5*score[9];
-        players[5].rank = 1.0 +
-        0.3*score[0] + 1.0*score[1] + 1.2*score[2] + 0.2*score[3] + 0.2*score[4] + 0.3*score[5] + 1.2*score[6] + 0*score[7] + .4*score[8] + 1.3*score[9];
-        players[6].rank = -0.5 +
-        0.6*score[0] + 0.6*score[1] + 0.4*score[2] + 1.5*score[3] + 0.8*score[4] + 0.9*score[5] + 0.2*score[6] + 0*score[7] + .6*score[8] + .2*score[9];
-        players[7].rank = -0.25 +
-        0.69*score[0] + 0.8*score[1] + 0.9*score[2] + 0.8*score[3] + 0.2*score[4] + 0.9*score[5] + 0.6*score[6] + 0*score[7] + .9*score[8] + .3*score[9];
-        players[8].rank = -0.5 +
-        1.2*score[0] + 0.8*score[1] + 0.8*score[2] + 0.9*score[3] + 0.8*score[4] + 0.8*score[5] + 0.1*score[6] + 0*score[7] + .8*score[8] + .1*score[9];    
-        players[9].rank = 0.25 +
-        0.7*score[0] + 0.7*score[1] + 0.9*score[2] + 0.7*score[3] + 0.2*score[4] + 0.9*score[5] + 0.5*score[6] + 0.5*score[7] + 1.0*score[8] + .2*score[9];    
-  
-        players.sort(compare);
-        players.map(a => a.name);
+      //tabulate rank for every player based on answers
+      players[0].rank = 1.0 +
+      0.3*score[0] + 1.0*score[1] + 0.6*score[2] + 1.2*score[3] + 0.5*score[4] + 0.6*score[5] + 1.5*score[6] + 0*score[7] + .6*score[8] + .6*score[9];
+      players[1].rank = 1.5 +
+      0.2*score[0] + 0.8*score[1] + 0.8*score[2] + 0.4*score[3] + 0.4*score[4] + 0.5*score[5] + 1.2*score[6] + 1*score[7] + .2*score[8] + .8*score[9];
+      players[2].rank = 1.0 +
+      0.1*score[0] + 0.1*score[1] + 0.8*score[2] + 0.5*score[3] + 0.7*score[4] + 0.7*score[5] + 1.0*score[6] + 1*score[7] + .2*score[8] + 1.2*score[9];
+      players[3].rank = 0.5 +
+      0.8*score[0] + 0.8*score[1] + 1.0*score[2] + 0.8*score[3] + 0.5*score[4] + 0.5*score[5] + 0.5*score[6] + 0*score[7] + .8*score[8] + .5*score[9];
+      players[4].rank = 1.0 +
+      0.6*score[0] + 0.9*score[1] + 0.4*score[2] + 0.9*score[3] + 0.3*score[4] + 0.9*score[5] + 0.3*score[6] + 0*score[7] + .3*score[8] + .5*score[9];
+      players[5].rank = 1.0 +
+      0.3*score[0] + 1.0*score[1] + 1.2*score[2] + 0.2*score[3] + 0.2*score[4] + 0.3*score[5] + 1.2*score[6] + 0*score[7] + .4*score[8] + 1.3*score[9];
+      players[6].rank = -0.5 +
+      0.6*score[0] + 0.6*score[1] + 0.4*score[2] + 1.5*score[3] + 0.8*score[4] + 0.9*score[5] + 0.2*score[6] + 0*score[7] + .6*score[8] + .2*score[9];
+      players[7].rank = -0.25 +
+      0.69*score[0] + 0.8*score[1] + 0.9*score[2] + 0.8*score[3] + 0.2*score[4] + 0.9*score[5] + 0.6*score[6] + 0*score[7] + .9*score[8] + .3*score[9];
+      players[8].rank = -0.5 +
+      1.2*score[0] + 0.8*score[1] + 0.8*score[2] + 0.9*score[3] + 0.8*score[4] + 0.8*score[5] + 0.1*score[6] + 0*score[7] + .8*score[8] + .1*score[9];    
+      players[9].rank = 0.25 +
+      0.7*score[0] + 0.7*score[1] + 0.9*score[2] + 0.7*score[3] + 0.2*score[4] + 0.9*score[5] + 0.5*score[6] + 0.5*score[7] + 1.0*score[8] + .2*score[9];    
+      
+      //sort array of players by rank, spit out the ordered names in an array
+      players.sort(compare);
+      players.map(a => a.name);
    
-
+      //populate HTML in results container
       if(currentQuestion == totalQuestions) {
           container.style.display = 'none';
           result.style.display = "inherit";
@@ -237,26 +225,20 @@ const questions = [
       generateQuestions(currentQuestion);
     }
   
-  //Function to load previous question
+  //load previous question
   function loadPreviousQuestion() {
-      //Decrement quentions index
       currentQuestion--;
-      //remove last array value;
       score.pop();
-      //Generate the question
       generateQuestions(currentQuestion);
   }
   
-  //Fuction to reset and restart the quiz;
+  //reset and restart the quiz;
   function restartQuiz(e) {
       if(e.target.matches('button')) {
-      //reset array index and score
       currentQuestion = 0;
       score = [];
-      //Reload quiz to the start
       location.reload();
       }
-  
   }
   
   
