@@ -191,7 +191,7 @@ const questions = [
       0.69*score[0] + 0.8*score[1] + 0.9*score[2] + 0.8*score[3] + 0.2*score[4] + 0.9*score[5] + 0.6*score[6] + 0*score[7] + .9*score[8] + .3*score[9];
       players[8].rank = -0.5 +
       1.2*score[0] + 0.8*score[1] + 0.8*score[2] + 0.9*score[3] + 0.8*score[4] + 0.8*score[5] + 0.1*score[6] + 0*score[7] + .8*score[8] + .1*score[9];    
-      players[9].rank = 0.25 +
+      players[9].rank = 0.5 +
       0.7*score[0] + 0.7*score[1] + 0.9*score[2] + 0.7*score[3] + 0.2*score[4] + 0.9*score[5] + 0.5*score[6] + 0.5*score[7] + 1.0*score[8] + .2*score[9];   
       players[10].rank = -2.0 +
       0.4*score[0] + 1.0*score[1] + 0.5*score[2] + 1.0*score[3] + 0.3*score[4] + 0.5*score[5] + 1.5*score[6] + 0.5*score[7] + 0.6*score[8] + .3*score[9]; 
