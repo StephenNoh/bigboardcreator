@@ -2,7 +2,7 @@
 
 const questions = [
     {
-      "question": "I'm not worried if a prospect is a poor defender right now. Defense can be taught.",
+      "question": "I'm not worried if a prospect is a poor defender right now. They can learn to be good once they get to the NBA.",
       "answer1": "Agree",
       "answer1Total": 0,
       "answer2": "Neutral",
@@ -11,7 +11,7 @@ const questions = [
       "answer3Total": 2
     },
     {
-      "question": "I don't mind an older prospect as long as the production is there.",
+      "question": "I don't mind taking an older prospect as long as the production is there.",
       "answer1": "Agree",
       "answer1Total": 0,
       "answer2": "Neutral",
@@ -20,7 +20,7 @@ const questions = [
       "answer3Total": 2
     },
     {
-      "question": "I need my pick to be a top-tier athlete.",
+      "question": "Give me the guy with top-tier athleticism even if he lacks polish.",
       "answer1": "Agree",
       "answer1Total": 2,
       "answer2": "Neutral",
@@ -65,7 +65,7 @@ const questions = [
       "answer3Total": 0
     },
     {
-      "question": "I would almost never use a good lottery pick on a big man.",
+      "question": "I'm not wasting a good lottery pick on a big man.",
       "answer1": "Agree",
       "answer1Total": -2.5,
       "answer2": "Neutral",
