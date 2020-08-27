@@ -3,42 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2020 NBA Draft Big Board Creator</title>
+    <title>2020 NBA Draft Big Board Creator</title> 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
 
-    <div class="quiz-container">
-        <div class="title">Create your big board</div>
-        <div>This site ranks 11 commonly mentioned top prospects* based on what types of traits you tend to value.</div>
-        <div id="disclaimer">*Prospects included are LaMelo Ball, James Wiseman, Obi Toppin, Killian Hayes, Deni Avdija, Anthony Edwards, Tyrese Haliburton, Isaac Okoro, Devin Vassell, Onyeka Okongwu, and Aleksej Pokusevski.</div>
-        <div id="question" class="question"></div>
-        <label class="option">
-            <input type="radio" name="option" value="1" />
-            <span class="option1"></span>
-        </label>
-        <label class="option">
-            <input type="radio" name="option" value="2" />
-            <span class="option2"></span>
-        </label>
-        <label class="option">
-            <input type="radio" name="option" value="3" />
-            <span class="option3"></span>
-        </label>
-        <!-- Buttons -->
-        <div class="controls">
-            <button class="previous">Previous</button>
-            <button class="next">Next</button>
+    <div class="container">
+        <div class="jumbotron">
+            <h2>Create your 2020 NBA Draft Big Board</h2>
+            <p class="lead">This site ranks 11 commonly mentioned top prospects* based on what types of traits you tend to value.</p>
+            <hr class="my-4">
+            <p id="prospects-list">*Prospects included are LaMelo Ball, James Wiseman, Obi Toppin, Killian Hayes, Deni Avdija, Anthony Edwards, Tyrese Haliburton, Isaac Okoro, Devin Vassell, Onyeka Okongwu, and Aleksej Pokusevski.</p>
+          </div>
+        <div class="quiz-container">
+            <ol>
+                <div id="question" class="question"></div>
+            </ol>
+            <label class="option">
+                <input type="radio" name="option" value="1" />
+                <span class="option1"></span>
+            </label>
+            <label class="option">
+                <input type="radio" name="option" value="2" />
+                <span class="option2"></span>
+            </label>
+            <label class="option">
+                <input type="radio" name="option" value="3" />
+                <span class="option3"></span>
+            </label>
+            <!-- Buttons -->
+            <div class="controls">
+                <button class="previous">Previous</button>
+                <button class="next">Next</button>
+            </div>
         </div>
-    </div>
 
-    <div class="result" id="hidden"></div>
+        <div class="result" id="hidden"></div>
    
     <!-- Copyright Section-->
-    <div id="footer">
-        <a href="https://twitter.com/StephNoh">Follow me on Twitter @StephNoh</a>
-        <div class="copyright">Copyright © Stephen Noh 2020</div>
+        <div class="footer">
+            <a href="https://twitter.com/StephNoh">Follow me on Twitter @StephNoh</a>
+            <div class="copyright">Copyright © Stephen Noh 2020</div>
+        </div>
     </div>
     <script src="scripts.js"></script>
 </body>
