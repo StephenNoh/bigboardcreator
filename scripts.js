@@ -93,17 +93,61 @@ const questions = [
   ]
 
 const players = [
-  {name: "LaMelo Ball", rank: 1.5, video: "https://www.youtube.com/watch?v=5d3MNxZ07Ic", position: "Guard"},
-  {name: "James Wiseman", rank: 1.5, video: "https://www.youtube.com/watch?v=K2XHtqbsVqQ", position: "Big"},
-  {name: "Obi Toppin", rank: 0.5, video: "https://www.youtube.com/watch?v=-mlZhl86Ulk", position: "Big"},
-  {name: "Killian Hayes", rank: 0.5, video: "https://www.youtube.com/watch?v=y8nq-wAZGkg", position: "Guard"},
-  {name: "Deni Avdija", rank: 0, video: "https://www.youtube.com/watch?v=bmKrg1zWVys", position: "Forward"},
-  {name: "Anthony Edwards", rank: 1.5, video: "https://www.youtube.com/watch?v=l46pqSeeA34", position: "Guard"},
-  {name: "Tyrese Haliburton", rank: -1.0, video: "https://www.youtube.com/watch?v=U3qOd8PQvxQ", position: "Guard"},
-  {name: "Isaac Okoro", rank: -1.0, video: "https://www.youtube.com/watch?v=iATlCqxmRi0", position: "Wing"},
-  {name: "Devin Vassell", rank: -0.5, video: "https://www.youtube.com/watch?v=O6ZtJw1k3bk", position: "Wing"},
-  {name: "Onyeka Okongwu", rank: -10, video: "https://www.youtube.com/watch?v=nulhicMWpvo", position: "Big"},
-  {name: "Aleksej Pokusevski", rank: -11, video: "https://www.youtube.com/watch?v=kXFjuG5BJvA", position: "Forward"}
+  {name: "LaMelo Ball", 
+    rank: 1, 
+    video: "https://youtu.be/4Cp5uLpn2mk",
+    position: "Guard"
+  },
+  {name: "James Wiseman", 
+    rank: 2, 
+    video: "https://youtu.be/KR6QP_U2x-U", 
+    position: "Big"
+  },
+  {name: "Obi Toppin", 
+    rank: 3, 
+    video: "https://youtu.be/R7uLXOSQSCQ", 
+    position: "Big"
+  },
+  {name: "Killian Hayes", 
+    rank: 4, 
+    video: "https://youtu.be/6jZEKNHCYAo", 
+    position: "Guard"
+  },
+  {name: "Deni Avdija", 
+    rank: 5, 
+    video: "https://www.youtube.com/watch?v=bmKrg1zWVys", 
+    position: "Forward"
+  },
+  {name: "Anthony Edwards", 
+    rank: 6, 
+    video: "https://youtu.be/k3iayLEQcTw", 
+    position: "Guard"
+  },
+  {name: "Tyrese Haliburton", 
+    rank: 7, 
+    video: "https://youtu.be/dl02-RSIjCA", 
+    position: "Guard"
+  },
+  {name: "Isaac Okoro", 
+    rank: 8, 
+    video: "https://youtu.be/jiH8FTOsKyo", 
+    position: "Wing"
+  },
+  {name: "Devin Vassell", 
+    rank: 9, 
+    video: "https://youtu.be/pHjfKLZQbu8", 
+    position: "Wing"
+  },
+  {name: "Onyeka Okongwu", 
+    rank: 10, 
+    video: "https://youtu.be/Ty4C325wiC4", 
+    position: "Big"
+  },
+  {name: "Aleksej Pokusevski", 
+    rank: 11, 
+    video: "https://www.youtube.com/watch?v=kXFjuG5BJvA", 
+    position: "Forward"
+  }
 ]
 
   
@@ -214,75 +258,75 @@ function loadNextQuestion () {
           <tr>
             <th scope="col">Rank</th>
             <th scope="col">Name</th>
-            <th scope="col">Position</th>
-            <th scope="col">YouTube Video</th>
+            <th scope="col" class="pos">Position</th>
+            <th scope="col">Scouting Video</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <th scope="row">1</th>
             <td>${players[10].name}</td>
-            <td>${players[10].position}</td>
+            <td class="pos">${players[10].position}</td>
             <td><a href="${players[10].video}" target="_blank">Watch</a></td>
           </tr>
           <tr>
             <th scope="row">2</th>
             <td>${players[9].name}</td>
-            <td>${players[9].position}</td>
+            <td class="pos">${players[9].position}</td>
             <td><a href="${players[9].video}" target="_blank">Watch</a></td>
           </tr>
           <tr>
             <th scope="row">3</th>
             <td>${players[8].name}</td>
-            <td>${players[8].position}</td>
+            <td class="pos">${players[8].position}</td>
             <td><a href="${players[8].video}" target="_blank">Watch</a></td>
           </tr>
           <tr>
             <th scope="row">4</th>
             <td>${players[7].name}</td>
-            <td>${players[7].position}</td>
+            <td class="pos">${players[7].position}</td>
             <td><a href="${players[7].video}" target="_blank">Watch</a></td>
           </tr>
           <tr>
             <th scope="row">5</th>
             <td>${players[6].name}</td>
-            <td>${players[6].position}</td>
+            <td class="pos">${players[6].position}</td>
             <td><a href="${players[6].video}" target="_blank">Watch</a></td>
           </tr>
           <tr>
             <th scope="row">6</th>
             <td>${players[5].name}</td>
-            <td>${players[5].position}</td>
+            <td class="pos">${players[5].position}</td>
             <td><a href="${players[5].video}" target="_blank">Watch</a></td>
           </tr>
           <tr>
             <th scope="row">7</th>
             <td>${players[4].name}</td>
-            <td>${players[4].position}</td>
+            <td class="pos">${players[4].position}</td>
             <td><a href="${players[4].video}" target="_blank">Watch</a></td>
           </tr>
           <tr>
             <th scope="row">8</th>
             <td>${players[3].name}</td>
-            <td>${players[3].position}</td>
+            <td class="pos">${players[3].position}</td>
             <td><a href="${players[3].video}" target="_blank">Watch</a></td>
           </tr>
           <tr>
             <th scope="row">9</th>
             <td>${players[2].name}</td>
-            <td>${players[2].position}</td>
+            <td class="pos">${players[2].position}</td>
             <td><a href="${players[2].video}" target="_blank">Watch</a></td>
           </tr>
           <tr>
             <th scope="row">10</th>
             <td>${players[1].name}</td>
-            <td>${players[1].position}</td>
+            <td class="pos">${players[1].position}</td>
             <td><a href="${players[1].video}" target="_blank">Watch</a></td>
           </tr>
           <tr>
             <th scope="row">11</th>
             <td>${players[0].name}</td>
-            <td>${players[0].position}</td>
+            <td class="pos">${players[0].position}</td>
             <td><a href="${players[0].video}" target="_blank">Watch</a></td>
           </tr>
         </tbody>
