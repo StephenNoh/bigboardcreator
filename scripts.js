@@ -18,7 +18,7 @@ const questions = [
       "answer3Total": 2
     },
     {
-      "question": "Give me the guy with top-tier athleticism even if he hasn't found out the best way to use it yet.",
+      "question": "Give me the guy with top-tier athleticism even if he hasn't figured out how to use it yet.",
       "answer1": "Agree",
       "answer1Total": 2,
       "answer2": "Neutral",
