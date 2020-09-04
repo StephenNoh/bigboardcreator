@@ -145,7 +145,7 @@ const players = [
   },
   {name: "Aleksej Pokusevski", 
     rank: 11, 
-    video: "https://www.youtube.com/watch?v=kXFjuG5BJvA", 
+    video: "https://www.youtube.com/watch?v=M6FU9y2WHR4&feature=youtu.be&ab_channel=AdamSpinella", 
     position: "Forward"
   },
   {name: "Patrick Williams",
